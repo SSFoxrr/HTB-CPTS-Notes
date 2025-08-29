@@ -125,5 +125,14 @@ for i in $(cat rockyou.txt);do openssl enc -aes-256-cbc -d -in GZIP.gzip -k $i 2
 ```
 ### Network Services
 ```bash
+
+# Netexec
 netexec <proto>(winrm) <target-IP> -u <user or userlist> -p <password or passwordlist>
+sudo apt-get -y install netexec
+
+# Evil-WinRM
+sudo gem install evil-winrm
+evil-winrm -i <target-IP> -u <username> -p <password>
+
+
 ```

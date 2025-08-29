@@ -147,6 +147,6 @@ smbclient -U user \\\\10.129.42.197\\SHARENAME
 # Hydra SSH
 hydra -L user.list -P password.list ssh://10.129.42.197
 
-
+# Find a file using cmd
 dir C:\*flag.txt* /s /b
 ```

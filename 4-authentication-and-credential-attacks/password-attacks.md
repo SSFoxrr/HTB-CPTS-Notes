@@ -131,6 +131,7 @@ netexec <proto>(winrm) <target-IP> -u <user or userlist> -p <password or passwor
 sudo apt-get -y install netexec
 
 # Evil-WinRM
+Do this after Netexec
 sudo gem install evil-winrm
 evil-winrm -i <target-IP> -u <username> -p <password>
 

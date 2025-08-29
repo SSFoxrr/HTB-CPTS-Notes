@@ -123,7 +123,7 @@ bitlocker2john -i Backup.vhd > backup.hashes
 # Decrypt encrypted files with OpenSSL
 for i in $(cat rockyou.txt);do openssl enc -aes-256-cbc -d -in GZIP.gzip -k $i 2>/dev/null | tar xz;done
 ```
-#### Network Services
+### Network Services
 ```bash
 netexec <proto> <target-IP> -u <user or userlist> -p <password or passwordlist>
 ```

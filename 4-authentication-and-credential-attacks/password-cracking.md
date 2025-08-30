@@ -8,6 +8,8 @@ John
 ```shell
 --format <hash format>
 --wordlist <password list>
+john --single --format=sha512crypt hashes.txt
+
 ````
 
 Hashcat

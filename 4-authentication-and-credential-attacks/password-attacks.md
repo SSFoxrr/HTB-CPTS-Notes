@@ -12,6 +12,10 @@ hashcat --force password.list -r custom.rule --stdout > mut_password.list
 
 # Download a list of file extensions for password searching
 curl -s https://fileinfo.com/filetypes/compressed | html2text | awk '{print tolower($1)}' | grep "\." | tee -a compressed_ext.txt
+
+# Kerbrute (after username-anarchy) to hone in on legitimate usernames
+./kerbrute_linux_amd64 userenum --dc 10.129.202.85 --domain ILF.local names.txt
+
 ```
 
 ### Remote Password Attacks

@@ -1,7 +1,7 @@
 ### Password Locations
 
 ```md
-- `Files`: including configs, databases, notes, scripts, source code, cronjobs, and SSH keys
+- Files: including configs, databases, notes, scripts, source code, cronjobs, and SSH keys
 - `History`: including logs, and command-line history
 - `Memory`: including cache, and in-memory processing
 - `Key-rings`: such as browser stored credentials

@@ -23,6 +23,8 @@
 - `Browsers`:
   - ls -l .mozilla/firefox/ | grep default
   - cat .mozilla/firefox/1bplpd86.default-release/logins.json | jq .
+  - python3.9 firefox_decrypt.py
+  - python3 laZagne.py browsers
 ```
 
 ### Password Mutations

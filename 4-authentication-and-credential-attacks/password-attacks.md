@@ -20,6 +20,9 @@
   - Need admin/root: sudo python3 mimipenguin.py
 - `Key-rings`: such as browser stored credentials
   - sudo python2.7 laZagne.py all
+- `Browsers`:
+  - ls -l .mozilla/firefox/ | grep default
+  - cat .mozilla/firefox/1bplpd86.default-release/logins.json | jq .
 ```
 
 ### Password Mutations

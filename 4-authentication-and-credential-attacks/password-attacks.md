@@ -209,4 +209,9 @@ hydra -L user.list -P password.list ssh://10.129.42.197
 
 # Find a file using cmd
 dir C:\*flag.txt* /s /b
+
+# Network
+Pcredz:used to extract credentials from live traffic or network packet captures
+./Pcredz -f demo.pcapng -t -v
+
 ```

@@ -2,7 +2,7 @@
 
 ```md
 - `Files`: including configs, databases, notes, scripts, source code, cronjobs, and SSH keys
-  - Configuration files
+  - Configuration files (.config, .conf, .cnf)
   - Databases
   - Notes
   - Scripts

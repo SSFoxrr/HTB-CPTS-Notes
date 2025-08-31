@@ -2,15 +2,16 @@
 
 ```md
 - `Files`: including configs, databases, notes, scripts, source code, cronjobs, and SSH keys
-  - Configuration files (.config, .conf, .cnf)
+  - Configuration files (.config, .conf, .cnf):
     - for i in $(find / -name *.cnf 2>/dev/null | grep -v "doc\|lib");do echo -e "\nFile: " $i; grep "user\|password\|pass" $i 2>/dev/null | grep -v "\#";done
-  - Databases
+  - Databases:
     - for l in $(echo ".sql .db .*db .db*");do echo -e "\nDB File extension: " $l; find / -name *$l 2>/dev/null | grep -v "doc\|lib\|headers\|share\|man";done
-  - Notes
+  - Notes:
     - find /home/* -type f -name "*.txt" -o ! -name "*.*"
-  - Scripts
+  - Scripts:
     - for l in $(echo ".py .pyc .pl .go .jar .c .sh");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "doc\|lib\|headers\|share";done
-  - Cronjobs
+  - Cronjobs:
+    - cat /etc/crontab
   - SSH keys
 - `History`: including logs, and command-line history
 - `Memory`: including cache, and in-memory processing

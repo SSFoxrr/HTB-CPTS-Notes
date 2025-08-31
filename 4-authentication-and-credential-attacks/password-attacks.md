@@ -4,9 +4,9 @@
 - `Files`: including configs, databases, notes, scripts, source code, cronjobs, and SSH keys
   - Configuration files (.config, .conf, .cnf)
 ```
-``bash
+`bash
     - for l in $(echo ".conf .config .cnf");do echo -e "\nFile extension: " $l; find / -name *$l 2>/dev/null | grep -v "lib\|fonts\|share\|core" ;done
-``
+`
 ```md
   - Databases
   - Notes
